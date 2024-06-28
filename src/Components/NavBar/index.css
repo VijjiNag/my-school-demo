@@ -126,8 +126,9 @@
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
     .nav-bg-container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* Keep flex direction as row */
+        align-items: center;
+        justify-content: space-between; /* Ensure logo and menu icon are on the same line */
         padding: 10px;
     }
 
