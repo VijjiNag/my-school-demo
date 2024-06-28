@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { IoIosMenu, IoIosClose } from 'react-icons/io';
-import Announcements from '../Announcements';
 import './index.css';
 
 const NavBar = () => {
@@ -16,8 +15,12 @@ const NavBar = () => {
     };
 
     return (
-        <div className='container'>
-            <Announcements />
+        <div className='nav-container'>
+            <div className='announcements-bg-container'>
+                <img src='https://res.cloudinary.com/dhfmjj1j9/image/upload/v1719120116/Group_249_u8tzyz.png' alt='announce' className='announce-img' />
+                <p className='announce-desc'>Applications open 20-24 April!!!</p>
+                <img src='https://res.cloudinary.com/dhfmjj1j9/image/upload/v1719120116/Group_249_u8tzyz.png' alt='announce' className='announce-img' />
+            </div>
             <div className={`nav-bg-container ${isMenuOpen ? 'expanded' : ''}`}>
                 <div className='nav-logo-container'>
                     <img className='logo' src='https://res.cloudinary.com/dhfmjj1j9/image/upload/v1719121650/Group_134_gltj7x.png' alt='logo' />

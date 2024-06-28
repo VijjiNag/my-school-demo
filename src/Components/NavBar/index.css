@@ -1,6 +1,10 @@
 /* General container settings */
-.container {
+.nav-container {
     width: 100%;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0;
+    z-index: 1000; /* Higher z-index for the navbar */
 }
 
 /* Navbar container */
@@ -13,7 +17,12 @@
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    position: relative;
+    border-bottom: 1px solid #ddd; /* Optional: Add a bottom border */
+}
+
+/* Add padding to the top of the body to account for the fixed navbar height */
+body {
+    padding-top: 100px; /* Adjust this value to match the navbar height */
 }
 
 /* Logo container */
@@ -89,22 +98,25 @@
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
     .nav-items-container {
-        display: none;
         flex-direction: column;
         gap: 10px;
+        align-items: center;
         position: absolute;
-        top: calc(100% + 10px);
+        top: 100%; /* Position below the navbar */
         left: 0;
         width: 100%;
         background-color: #FEFEFE;
         padding: 20px 0;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-        align-items: center;
+        z-index: 10; /* Higher z-index for the menu */
+        visibility: hidden; /* Initially hidden */
+        opacity: 0; /* Initially invisible */
+        transition: visibility 0.3s, opacity 0.3s; /* Smooth transition */
     }
 
     .nav-items-container.open {
-        display: flex;
+        visibility: visible;
+        opacity: 1;
     }
 
     .nav-item {
@@ -126,9 +138,9 @@
 /* For screens smaller than 480px */
 @media (max-width: 480px) {
     .nav-bg-container {
-        flex-direction: row; /* Keep flex direction as row */
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between; /* Ensure logo and menu icon are on the same line */
+        justify-content: space-between;
         padding: 10px;
     }
 
@@ -142,7 +154,7 @@
     }
 
     .nav-items-container {
-        top: calc(100% + 10px);
+        top: calc(94% + 10px);
         left: 0;
         width: 100%;
     }
@@ -167,5 +179,74 @@
         height: 2px;
         background-color: currentColor;
         width: 50%;
+    }
+}
+
+.announcements-bg-container {
+    height: auto; /* Adjusted to auto to fit content */
+    padding: 20px 20px; /* Adjusted padding for smaller screens */
+    gap: 10px;
+    background-color: #19C1B6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.announce-img {
+    width: 24px;
+    height: auto;
+}
+
+.announce-desc {
+    font-family: Fredoka;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32.63px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 0 10px;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+    .announcements-bg-container {
+        padding: 20px 50px; /* Adjusted padding */
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .announcements-bg-container {
+        flex-direction: row; /* Stack items vertically */
+        padding: 10px 20px; /* Adjusted padding */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .announce-desc {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center; /* Center text on smaller screens */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .announce-img {
+        width: 20px; /* Adjust image size */
+        margin-bottom: 10px; /* Add margin to bottom of images */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .announcements-bg-container {
+        padding: 10px 10px; /* Adjusted padding */
+    }
+
+    .announce-desc {
+        font-size: 16px;
+        line-height: 24px;
     }
 }

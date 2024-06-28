@@ -13,6 +13,7 @@
     padding: 27px;
     width: 100%; /* Ensures full width */
     box-sizing: border-box; /* Ensures padding doesn't add to width */
+    margin-top: 60px; /* Adjusted to push content below fixed navbar */
 }
 
 /* Content container */
@@ -92,6 +93,7 @@
         flex-direction: column;
         align-items: center;
         padding: 20px; /* Adjusted padding for smaller screens */
+        margin-top: 60px; /* Adjusted to push content below fixed navbar */
     }
 
     .home-content-container {
@@ -107,6 +109,7 @@
     .home-banner-container {
         display: none;
     }
+
     .apply-now-btn {
         font-size: 20px;
         line-height: 25px;
@@ -119,6 +122,13 @@
 @media (max-width: 768px) {
     .home-content-container {
         width: 100%;
+    }
+
+    .home-bg-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* Adjusted padding for smaller screens */
+        margin-top: 50px; /* Adjusted to push content below fixed navbar */
     }
 
     .apply-now-btn {

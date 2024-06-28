@@ -12,6 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    margin-top: 60px; /* Adjusted to push content below fixed navbar */
   }
   
   .programs-head-1 {
@@ -741,6 +743,10 @@
       padding-left: 0; /* Reset padding */
       text-align: center;
     }
+
+    .programs-bg-container-1 {
+      margin-top: 50px;
+    }
   
     .programs-dashboard-content-container {
       gap: 0;
@@ -808,4 +814,53 @@
     }
     
   }
-  
+
+  @media screen and (max-width:486px) {
+    .programs-card-container-sports {
+      width: 300px;
+      height: 730px;
+      top: 3682px;
+      left: 129px;
+      gap: 0px;
+      border-radius: 32px;
+      background-color: #ffffff;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    .programs-card-1 {
+      width: 340px;
+      height: 500px;
+      top: 1474px;
+      left: 123px;
+      gap: 0px;
+      border-radius: 32px;
+      border: 1.5px 0px 0px 0px;
+      border: 1.5px dashed #75003d;
+      background-color: #ffffff;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .programs-card-2 {
+      width: 340px;
+      height: 500px;
+      top: 1474px;
+      left: 123px;
+      gap: 0px;
+      border-radius: 32px;
+      border: 1.5px 0px 0px 0px;
+      border: 1.5px dashed #75003d;
+      background-color: #ffffff;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+  }
