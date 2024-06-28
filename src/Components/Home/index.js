@@ -10,7 +10,7 @@ const Home = () => (
             <div className="home-content-container">
                 <p className="kindergarten-program">Kindergarten Program</p>
                 <h1 className="home-head">Best Children’s Education Curriculum</h1>
-                <p className="home-admission">Admission Open 20-24 April</p>
+                <p className="home-admission">Admissions will Open 20-24 April</p>
                 <button className="apply-now-btn" type="button">Apply Now</button>
             </div>
             <div className="home-banner-container">
